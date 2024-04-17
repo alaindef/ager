@@ -1,2 +1,2 @@
-include example_small.png
-include doc/example_small.png
+include /small.png
+include doc/small_doc.png
