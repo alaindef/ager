@@ -5,14 +5,15 @@ BUILDDIR=docs
 
 # change to project directory. -- return to current dir after execution of this script.
 while true ; do
+	echo "dir $PWD"
 	if [[ $PWD == "/" ]]; then
-		echo "we could not find the project directory gerber_writer"
+		echo "we could not find the project directory. it should contain tools in the root"
 		exit 
 	fi
 #    echo "base=$(basename $PWD) on path $PWD"
-    if [[ "$(basename $PWD)" =~ "gerber_writer" ]]; then
-      echo "pwd = $PWD"
-        break
+    if [[ "$(basename $PWD)" =~ "tools" ]]; then
+      cd ..
+      break
     fi
     cd ..
 done
