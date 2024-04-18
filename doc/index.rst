@@ -10,7 +10,7 @@ A simple API for writing Gerber files
    :maxdepth: 2
    :caption: Contents:
    
-   README
+   /README
    reference
    changelog
 

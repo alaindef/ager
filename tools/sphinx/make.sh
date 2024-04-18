@@ -1,7 +1,4 @@
-#sphinx-build: the following arguments are required: sourcedir, outputdir, filenames
-SPHINXBUILD=sphinx-build
-SOURCEDIR=doc
-BUILDDIR=docs
+sphinx-build: the following arguments are required: sourcedir, outputdir, filenames
 
 # change to project directory. -- return to current dir after execution of this script.
 while true ; do
@@ -10,7 +7,6 @@ while true ; do
 		echo "we could not find the project directory. it should contain tools in the root"
 		exit 
 	fi
-#    echo "base=$(basename $PWD) on path $PWD"
     if [[ "$(basename $PWD)" =~ "tools" ]]; then
       cd ..
       break
@@ -18,13 +14,15 @@ while true ; do
     cd ..
 done
 
+# copy README.rst form root to doc
 cp README.rst doc
+
 if [ -z "$1" ]
 then
-  echo "\nargument missing." 
-  $SPHINXBUILD -M help $SOURCEDIR $BUILDDIR
+  echo "\nargument missing. we will use html. you can run again with help as param" 
+  sphinx-build -M html doc docs
 else
-  $SPHINXBUILD -M $1 $SOURCEDIR $BUILDDIR
+  sphinx-build -M $1 doc docs
 #   $SPHINXOPTS $O
 fi
 
