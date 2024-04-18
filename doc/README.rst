@@ -37,8 +37,11 @@ Example::
 	with open('gerbers\gerber_writer_example_small.gbr', 'w') as outfile:
         top.dump_gerber(outfile)
 		
-.. image:: https://alaindef.github.io/ager/html/_images/small_doc.png
+ image:: https://alaindef.github.io/ager/html/_images/example_small.png
+ 
+.. image:: example_small.png
 	:width: 800
+
 
 Installation
 ------------
