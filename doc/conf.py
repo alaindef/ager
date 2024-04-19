@@ -14,6 +14,7 @@ import os
 import sys
 #adf r'...' to handle both windows and linux
 sys.path.insert(0, os.path.abspath(r'../src'))
+sys.path.insert(0, os.path.abspath(r'../'))
 
 # -- Project information -----------------------------------------------------
 
@@ -22,7 +23,7 @@ copyright = '2022, Karel Tavernier'
 author = 'Karel Tavernier'
 
 # The full version, including alpha/beta/rc tags
-release = '0.4.3.1'
+release = '15'
 
 
 # -- General configuration ---------------------------------------------------
